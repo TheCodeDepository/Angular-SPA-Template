@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title></title>
+
+
+  <!--<script src="scripts/jquery-1.9.1.min.js"></script>-->
+  <!--<script src="scripts/bootstrap.min.js"></script>-->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-route.js"></script>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.19.2/moment-with-locales.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-moment-picker/0.10.1/angular-moment-picker.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/angular-moment-picker/0.10.1/angular-moment-picker.min.css" />
+
+  <script src="app/app.js"></script>
+  <script src="app/addRecord/addRecord.js"></script>
+  <link href="css/style.processed.css" rel="stylesheet" />
+  <link href="css/style.processed.css" rel="stylesheet" />
+
+
+</head>
+
+<body ng-app="mainMenuModule">
+
+
+  <div id="wrapper" ng-class="{'toggled' : toggle}">
+    <div id="burger-menu">
+      <button class="btn" ng-click="toggle = ! toggle">
+                <div class="bar"></div>
+                <div class="bar"></div>             
+                <div class="bar"></div>
+            </button>
+    </div>
+
+    <div id="sidebar">
+      <ul class="sidebar-nav">
+        <li class="sidebar-brand">
+          <a href="#">My Custom Sidebar</a>
+        </li>
+        <li ng-click="toggle = ! toggle">
+          <a href="#!/homePage">TFL</a>
+        </li>
+        <li ng-click="toggle = ! toggle">
+          <a href="#!/addRecord">Add Record</a>
+        </li>
+      </ul>
+    </div>
+    <canvas id="fadeOverlay"></canvas>
+
+    <div id="page-content">
+      <ng-view></ng-view>
+    </div>
+
+  </div>
+
+</body>
+
+</html>

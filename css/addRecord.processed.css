@@ -1,0 +1,81 @@
+.bootstrap-border,
+#gallery-col .Gallery {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+
+.form-horizontal {
+  margin: 15px;
+}
+
+.gallery-inner {
+  width: 100%;
+  height: auto;
+}
+
+.panel-body {
+  height: 100%;
+}
+
+.panel-body #row-one {
+  height: 50%;
+}
+
+.panel-body #row-two {
+  height: auto;
+  margin-bottom: 0px;
+}
+
+#timePicker {
+  z-index: 0;
+}
+
+#gallery-col {
+  height: 100%;
+  padding-top: 14px;
+}
+
+#gallery-col .Gallery {
+  width: 100%;
+  height: 95%;
+  display: block;
+  margin: auto;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+#gallery-col .Gallery .item:before {
+  content: "";
+  display: block;
+  padding-top: 100%;
+}
+
+#gallery-col .Gallery .item {
+  display: inline-block;
+  width: 24.5%;
+  margin: auto;
+  margin-left: 0.5%;
+  position: relative;
+}
+
+#gallery-col .Gallery .item a {
+  margin-top: -100%;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+#gallery-col .Gallery .item a .center-cropped {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}

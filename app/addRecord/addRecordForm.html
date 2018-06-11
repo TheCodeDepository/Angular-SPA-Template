@@ -1,0 +1,129 @@
+<head>
+  <title></title>
+  <link href="css/addRecord.processed.css" rel="stylesheet" />
+</head>
+
+<div class="pageWrapper">
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h1 class="panel-title">Panel title</h1>
+    </div>
+    <div class="panel-body">
+
+      <div class="row" id="row-one">
+
+        <div class="col-lg-4">
+
+          <form class="form-horizontal">
+            <div class="form-group">
+              <label>Denomination: </label>
+              <input type="text" class="form-control">
+            </div>
+
+            <div class="form-group">
+              <label>Year: </label>
+              <input type="text" class="form-control" />
+            </div>
+
+            <div class="form-group">
+              <label>Collection: </label>
+              <input type="text" class="form-control" />
+            </div>
+
+            <div class="form-group" id="timePicker">
+              <div class="input-group" moment-picker="ctrl.datepicker" format="YYYY-MM-DD">
+                <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+                <input class="form-control" placeholder="YYYY-MM-DD" ng-model="ctrl.datepicker" ng-model-options="{ updateOn: 'blur' }">
+              </div>
+            </div>
+
+
+            <div class="form-group">
+              <label>Condition: </label>
+              <select class="form-control">
+                <option></option>
+                <option>Uncirculated</option>
+                <option>Brilliant</option>
+                <option>Very Good</option>
+                <option>Good</option>
+                <option>Used</option>                                
+                <option>Damaged</option>
+              </select>
+            </div>
+
+          </form>
+        </div>
+
+
+        <div class="col-lg-8" id="gallery-col">
+          <div>
+            <label for="recordImages">Gallery:</label>
+          </div>
+
+          <div class="Gallery" ng-controller="addRecordCtrl">
+            <div class="gallery-inner">
+
+
+              <div class="item" ng-repeat="x in records">
+                <a>
+                  <div class="center-cropped" style="background-image: url('{{x.imgPath}}');"></div>
+                </a>
+              </div>
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+
+      <div class="row" id="row-two">
+        <div class="col-lg-4">
+          <form class="form-horizontal">
+            <div class="form-group">
+              <label>Name: </label>
+              <input type="text" class="form-control">
+            </div>
+
+            <div class="form-group">
+              <label>Name: </label>
+              <input type="text" class="form-control" />
+            </div>
+          </form>
+        </div>
+        <div class="col-lg-4">
+          <form class="form-horizontal">
+            <div class="form-group">
+              <label>Name: </label>
+              <input type="text" class="form-control">
+            </div>
+
+            <div class="form-group">
+              <label>Name: </label>
+              <input type="text" class="form-control" />
+            </div>
+          </form>
+        </div>
+        <div class="col-lg-4">
+          <form class="form-horizontal">
+            <div class="form-group">
+              <label>Name: </label>
+              <input type="text" class="form-control">
+            </div>
+
+            <div class="form-group">
+              <label>Name: </label>
+              <input type="text" class="form-control" />
+            </div>
+          </form>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+
+</div>
+<footer>
+
+</footer>
